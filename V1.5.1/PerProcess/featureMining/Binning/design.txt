@@ -1,0 +1,20 @@
+dataset -> system -> new form dataset
+
+input
+    dataset
+
+system
+    Binning features using User choosen methods.
+
+outputs
+    final dataset
+
+tools
+    binning_methods = {
+        Equal Width Binning, Equal Frequency Binning(Quantile), K-Means Binning,
+        Binning based on decision tree
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : config for each method describe list of related setting which must consider

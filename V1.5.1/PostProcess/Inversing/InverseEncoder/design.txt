@@ -1,0 +1,32 @@
+System Behavioral
+initial dataset and column and name method of encoder -> system -> column in final dataset
+
+inputs
+    dataset(csv), column, name of method of encoder(str)(from logging)
+
+system
+    from loggings check the encoder method and then reverse it.
+    incoded column saved in final dataset
+
+output
+    reversed encoder column which saved in final dataset
+
+tools
+    encoding_method(must reversed) = {
+        OneHotEncoder, LabelEncoder, BinaryEncoder, FrequencyEncoder, TargetEncoder,
+        TargetEncoder, Weight of Evidence (WoE), OrdinalEncoder, LabelBinarizer,
+        CyclicalEncoder
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : if final dataset doesn't exist consider it initial dataset.
+    important info four : config is the all important settings should considerd in each method. 
+
+usage example:
+    User give feature_column
+
+    system check the logger for name of encoder method
+    logger give us OneHotEncoder
+
+    final column save in the final dataset

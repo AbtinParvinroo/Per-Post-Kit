@@ -1,0 +1,25 @@
+dataset and method -> system -> final dataset
+
+inputs
+dataset
+
+system
+statics of methods that user select in each feature calculate and compare with thresholds(thresholds get by config)
+
+outputs
+final dataset
+
+tools
+    methods = {
+        SelectKBest, SelectPercentile, VarianceThreshold, Mutual Information,
+        ANOVA F-value, Chi-Square
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : config for each method describe list of related setting which must consider
+
+example
+    User give dataset and method_name as VarianceThreshold with config={Threshold=3}
+
+    each feature's varince calculate and features with less variance deleted.

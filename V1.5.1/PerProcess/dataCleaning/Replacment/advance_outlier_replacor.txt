@@ -1,0 +1,33 @@
+dataset and mask -> system -> final dataset
+
+inputs
+    column and pervius phase's mask
+
+system
+    using mask we find the Outliers of the column
+
+    replace them with user selected method
+
+outputs
+    final column in final dataset
+
+tools
+    replacment_methods = {
+        KNN Imputation, Iterative Imputer(MICE), Random Forest Imputation(MissForest),
+        GAN Imputation(GAIN), Linear Interpolation, Spline Interpolation
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : if user didn't choose any method and use the detecting method as well
+
+example
+    exaple one
+        user get the column and mask but didn't choose any method and mask
+
+        each row with NAN or True Mask fill with detecting mask making technique.
+
+    example two
+        user get the column and mask and GAIN method
+
+        each row with NAN or True Mask fill with GAIN with User choosen config.

@@ -1,0 +1,27 @@
+column -> simple routine -> outlier Mask
+
+input
+column
+
+system
+    build a mask from user selected routine with user selected config.
+
+output
+    outlier mask
+
+tools
+    detection_methods = {
+    Isolation Forest, Local Outlier Factor(LOF), One-Class SVM
+    Elliptic Envelope, DBSCAN, CBLOF, COPOD, SOS
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+
+example
+    user get the column and LOF method
+    user choose n_neighbors = 20, contamination = 0.05
+
+    mask trained.
+
+    mask saved for use in next phase.

@@ -1,0 +1,28 @@
+column -> simple routine -> outlier Mask
+
+input
+column
+
+system
+    build a mask from user selected routine with user selected config.
+
+output
+    outlier mask
+
+tools
+    detection_methods = {
+    Z-Score, Percentile, Quantile, IQR
+}
+
+    importnant info one: this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+
+example
+    user give the column(name = X)
+    user select z-score
+
+    config : threshold = 3
+
+    mask = (Xi - Xmean) / sd > 3
+
+    mask saved for use in next phase.

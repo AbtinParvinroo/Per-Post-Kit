@@ -1,0 +1,18 @@
+System Behavioral
+initial dataset and model and name method of interpretability -> system -> final dataset
+
+inputs
+    dataset(csv), model, name of method of interpretability(str)(from logging)
+
+output
+    final authorized dataset save in the final dataset
+
+tools
+    method = {
+        SHAPExplainer, LIMEExplainer, FeatureImportance, PartialDependence
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : if final dataset doesn't exist consider it initial dataset.
+    important info four : config is the all important settings should considerd in each method. 

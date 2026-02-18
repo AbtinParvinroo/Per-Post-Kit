@@ -1,0 +1,32 @@
+System Behavioral
+initial dataset and column and name method of scaling -> system -> column in final dataset
+
+inputs
+    dataset(csv), column, name of method of scaling(str)(from logging)
+
+system
+    from loggings check the scaling or Normalizition method and then reverse it.
+    reversed column saved in final dataset
+
+output
+    reversed scaling column which saved in final dataset
+
+tools
+    scaling_method(must reversed) = {
+        Normalizer(L1, L2, Max), Box-Cox Transformation, Yeo-Johnson Transformation,
+        Clipping(Winsorizing), StandardScaling, MinMaxScaler, RobustScaler, MaxAbsScaler,
+        PowerTransformer, QuantileTransformer, UnitVectorScaler
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : if final dataset doesn't exist consider it initial dataset.
+    important info four : config is the all important settings should considerd in each method. 
+
+usage example:
+    User give feature_column
+
+    system check the logger for name of scaling method
+    logger give us StandardScaler
+
+    final column save in the final dataset

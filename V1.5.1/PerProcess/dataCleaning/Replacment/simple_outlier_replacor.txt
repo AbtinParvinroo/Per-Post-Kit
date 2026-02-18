@@ -1,0 +1,25 @@
+column and mask -> system -> column in final dataset
+
+inputs
+    column and pervius phase's mask(Boolian)
+
+system
+    using mask we find the Outliers of the column
+
+    replace them with user selected method
+
+outputs
+    final column in final dataset
+
+tools
+    replacment_methods = {
+        Mean, Median, constant, ffill, bfill
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+
+example
+    user get the column and mean method and mask
+
+    each row with NAN or True Mask fill with mean

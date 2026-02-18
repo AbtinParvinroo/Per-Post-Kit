@@ -1,0 +1,27 @@
+System Behavioral
+initial dataset and column and name method of encoder -> system -> column in final dataset
+
+inputs
+    dataset(csv), column, name of method of threshold(str)(from logging)
+
+system
+    from User config check the settings of user selected method and with that build
+    a threshold for model
+
+output
+    final authorized dataset save in the final dataset
+
+tools
+    threshold_method = {
+        FixedThreshold, OptimalThreshold, AdaptiveThreshold
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : if final dataset doesn't exist consider it initial dataset.
+    important info four : config is the all important settings should considerd in each method. 
+
+usage example:
+    User give initial dataset and threshold method name and config(constant value = 0.5)
+
+    final authorized dataset save in the final dataset

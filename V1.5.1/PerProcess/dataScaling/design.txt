@@ -1,0 +1,39 @@
+dataset -> systemOne -- preperd dataset --> systemTwo -> final dataset based on first dataset
+
+inputs
+    dataset and feature columns name
+
+systems
+    systemOne
+        User select Scaling method name and with selected method system Scale features
+        then make new dataset.
+
+    systemTwo
+        User select normalazition method name and with selected method system Scale features
+        then replace it on new dataset we made for scaling method and if not exist make new
+        dataset.
+
+output
+    final dataset
+
+tools
+    systemOne
+        Scaling methods = {
+            StandardScaling, MinMaxScaler, RobustScaler, MaxAbsScaler,
+            PowerTransformer, QuantileTransformer, UnitVectorScaler
+        }
+
+    systemTwo
+        normalazition methods = {
+            Normalizer (L1, L2, Max), Box-Cox Transformation,
+            Yeo-Johnson Transformation, Clipping (Winsorizing)
+        }
+
+    importnant info one: this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : each system required one class.
+
+usage example:
+    we have df, features_name, target_name
+    cls=class_name(X=features_name, y=target_name)
+    cls.metod(tool_name, config)

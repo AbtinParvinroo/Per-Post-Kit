@@ -1,0 +1,25 @@
+categorical feature -> system -> new form dataset
+
+input
+    Categorical feature
+
+system
+    Encode using Users selected configs and bins
+
+outputs
+    final feature replace it in dataset
+
+tools
+    Encoding methods = {
+        OneHotEncoder, LabelEncoder, BinaryEncoder, FrequencyEncoder, TargetEncoder,
+        TargetEncoder, Weight of Evidence (WoE), OrdinalEncoder, LabelBinarizer,
+        CyclicalEncoder
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+
+usage example:
+    we have df, features_name, target_name
+    cls=class_name(X=features_name, y=target_name)
+    cls.metod(tool_name, config)

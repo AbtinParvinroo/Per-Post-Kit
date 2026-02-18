@@ -1,0 +1,27 @@
+System Behavioral
+initial dataset and model and name method of ensemble -> system -> final dataset
+
+inputs
+    dataset(csv), model, name of method of ensemble(str)(from logging)
+
+system
+    from User config check the settings of user selected method and with that make
+    a voting system for combien resualts of them.
+
+output
+    final authorized dataset save in the final dataset
+
+tools
+    ensemble_method = {
+        VotingClassifierAggregator, AveragingRegressor, StackingAggregator, BlendingAggregator
+    }
+
+    important info one : this tools important configs must taken from user.
+    important info two : this tools must developed as methods of one class.
+    important info there : if final dataset doesn't exist consider it initial dataset.
+    important info four : config is the all important settings should considerd in each method. 
+
+usage example:
+    User give initial dataset and voting method name and config
+
+    final authorized model set and final dataset save in the final dataset
